@@ -4,6 +4,7 @@
   "description": "A todo app with string item, a flag, and a date",
   "main": "index.js",
   "scripts": {
+    "start": "node ./node_modules/nodemon/bin/nodemon.js index.js",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "repository": {

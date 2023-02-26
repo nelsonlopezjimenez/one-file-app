@@ -10,7 +10,7 @@
     1. Message: "you cloned an empty rep"
     1. mkdir and cd one-file-express-mongo-todo-app
     1. npm init, npm install express mongoose ejs nodemon
-    1. touch indes.js .gitignore .env
+    1. touch index.js .gitignore .env
     1. .gitignore added node_modules, .env, node_modules*
     1. git add ./one-file-express-mongo-todo-app
     1. git commit

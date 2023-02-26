@@ -1,6 +1,7 @@
 //https://developer.mozilla.org/en-US/docs/Learn/Server-side/Express_Nodejs/Introduction
 // DEFINITION: Express is a popular unopinionated, minimalist web framework, written in JavaScript and hosted within the Node.js runtime environment. Express.js, or simply Express, is a back end web application framework for building RESTful APIs with Node.js, released as free and open-source software under the MIT License. It is designed for building web applications and APIs.[3] It has been called the de facto standard server framework for Node.js.[4]. 
 // from https://en.wikipedia.org/wiki/Express.js
+// DOCUMENTATION see : ./one-file-express-mongo-todo-app/node_modules/express/Readme.md
 
 // Mongoose is a MongoDB object modeling tool designed to work in an asynchronous environment. Mongoose supports Node.js and Deno (alpha). from https://www.npmjs.com/package/mongoose
 
@@ -29,6 +30,7 @@ app.use(express.static('public'));
 app.set("view engine", "ejs");
 
 // Database Server MongoDb Setup
+// See README file at: ./one-file-express-mongo-todo-app/node_modules/mongoose/README.md
 
 mongoose
   .connect("mongodb://127.0.0.1:27017/from-scratch", { useNewUrlParser: true })
@@ -53,11 +55,11 @@ const BlogPost = new Schema({
 
 const BlogPostModel = mongoose.model("BlogPost", BlogPost);
 
-// routes based on URL: The url is the full URL without the server, protocol or port. For a typical URL, this means everything after and including the third forward slash.
+// routes based on URL (Uniformed Resource Locator): The url is the full URL without the server, protocol or port. For a typical URL, this means everything after and including the third forward slash.
 // URL path the same as route definition!!!
 
 app.get("/", (req, res) => {
-  res.send("this is root route");
+    res.render('index.html', {item:POST});
 });
 
 app.get("/api/posts", (req, res) => {
@@ -111,6 +113,7 @@ app.listen(PORT, () => {
   console.log(`Server started, listening on port ${PORT}`);
 });
 
+// Adding new records hardcoded. Run createItem() only once!!!
 const createItem = async () => {
     const firstBlog = new BlogPostModel({
       title: "First blog",

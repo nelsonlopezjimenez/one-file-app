@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <style>
+        .flex {
+            display: flex;
+            flex-wrap: wrap;
+            flex-direction: row;
+        }
+    </style>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>one file</title>
+</head>
+
+<body>
+    <h1>This is the root route</h1>
+    <h2>The URL is 'http://localhost:1234/'</h2>
+    <h2>The relative URL is '/'</h2>
+    <h2>The absolute path should be: '/c/Users/sXXXXXX/Desktop/Q3/Labs/one-file-express-mongo-todo-app/</h2>
+    <h3>The RESTful routes are:</h3>
+    <ul>
+        <li>GET all data: <strong><em>http://localhost:1234/api/todos</em></strong></li>
+        <li>POST or create new data: <strong><em>http://localhost:1234/api/todos</em></strong></li>
+        <li>GET one record: <strong><em>http://localhost:1234/api/todos/:id</em></strong></li>
+        <li>PUT modify one record: <strong><em>http://localhost:1234/api/todos/:id</em></strong></li>
+        <li>DELETE one record: <strong><em>http://localhost:1234/api/todos/:id</em></strong></li>
+    </ul>
+    <h2>Example Patterns</h2>
+    <div class="flex">
+        <ul>
+            <li>
+                GET /posts
+            </li>
+            <li>
+                POST /posts
+            </li>
+            <li>
+                GET /posts/1
+            </li>
+            <li>
+                PUT /posts/1
+            </li>
+            <li>
+                DELETE /posts/1
+            </li>
+        </ul>
+        <ul>
+            <li>
+                GET /posts/1/comments
+            </li>
+            <li>
+                POST /posts/1/comments
+            </li>
+            <li>
+                GET /posts/1/comments/23
+            </li>
+            <li>
+                PUT /posts/1/comments/23
+            </li>
+            <li>
+                DELETE /posts/1/comments/23
+            </li>
+        </ul>
+        <ul>
+            <li>
+                GET /users
+            </li>
+            <li>
+                POST /users
+            </li>
+            <li>
+                GET /users/1
+            </li>
+            <li>
+                PUT /users/1
+            </li>
+            <li>
+                DELETE /users/1
+            </li>
+        </ul>
+        <ul>
+            <li>
+                GET /photos
+            </li>
+            <li>
+                POST /photos
+            </li>
+            <li>
+                GET /photos/1
+            </li>
+            <li>
+                PUT /photos/1
+            </li>
+            <li>
+                DELETE /photos/1
+            </li>
+        </ul>
+    </div>
+</body>
+
+</html>
